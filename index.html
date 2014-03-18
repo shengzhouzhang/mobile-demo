@@ -1,28 +1,30 @@
 <!doctype html>
 <html ng-app>
   <head>
-    <script src="http://10.0.0.61:9001/livereload.js"></script>
+    <script src="http://10.0.0.4:9001/livereload.js"></script>
     <script src="/lib/angular.min.js"></script>
     <script src="/src/todo.js"></script>
-    <link rel="stylesheet" href="/lib/bootstrap-3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/todo.css">
+    <link rel="stylesheet" href="/css/main.css">
   </head>
 <body>
-  <h2>ALALALAL</h2>
-  <div ng-controller="TodoCtrl">
-    <span>{{remaining()}} of {{todos.length}} remaining</span>
-      [ <a href="" ng-click="archive()">archive</a> ]
-    <ul class="unstyled">
-      <li ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.done">
-        <span class="done-{{todo.done}}">{{todo.text}}</span>
-      </li>
+  <div class="container one">
+    <div class="top-bar">
+      <ul><li>Mobile Demo</li></ul>
+    </div>
+    <div class="margin">
+    </div>
+    <h1>Page 1</h1>
+  </div>
+  <div class="container two">
+    <ul class="categories">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
-    <form ng-submit="addTodo()">
-      <input type="text" ng-model="todoText"  size="30"
-        placeholder="add new todo here">
-      <input class="btn-primary" type="submit" value="add">
-    </form>
   </div>
 </body>
 </html>

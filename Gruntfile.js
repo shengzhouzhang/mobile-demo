@@ -17,11 +17,22 @@ module.exports = function(grunt) {
         // or an Array of String for multiple entries
         // You can use globing patterns like `css/**/*.css`
         // See https://github.com/gruntjs/grunt-contrib-watch#files
-        files: 'index.html',
+        files: ['index.html', 'css/*.less', 'scr/*.js'],
         options: {
           livereload: {
             port: 9001
           }
+        }
+      },
+      less: {
+        files: 'css/*.less',
+        tasks: 'less'
+      }
+    },
+    less: {
+      development: {
+        files: {
+          "css/main.css": "css/main.less"
         }
       }
     },
@@ -37,6 +48,7 @@ module.exports = function(grunt) {
   // load plugins.
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-open');
 
   // creates tasks
